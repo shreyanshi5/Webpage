@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        .product-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .product-image:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        .about-us, .contact, .more-products {
+            background-color: #c4b7a6;
+        }
+        .pup-paradise-section {
+            background-image:url('https://wallpapercat.com/w/full/a/4/f/197575-1920x1280-desktop-hd-dog-wallpaper-photo.jpg');
+            background-size: cover;
+            background-position: center 20%;
+            background-repeat: no-repeat;
+            padding: 20px;
+            min-height: 530px;
+        }
+        .shop-now-btn {
+            position: absolute; 
+            bottom: 40px; 
+            left: 50px; 
+            padding: 10px 20px;
+            background-color: none;
+            color: white;
+            font-family: serif;
+            font-size: 18px;
+            border: 2px solid white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .shop-now-btn:hover {
+            background-color: #b2b2b2; 
+        }
+        nav a {
+            margin-right: 20px;
+            color: white;
+            font-family: serif;
+            text-decoration: none; 
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .scrolling-text {
+    position: relative;
+    font-size: 35px;
+    color: white;
+    font-family: cursive;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    animation: scrollFade 4s linear infinite; /* Reduced duration */
+}
+
+.scrolling-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    z-index: 1;
+}
+
+@keyframes scrollFade {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    52% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+        
+    </style>
+</head>
+<body style="background-color: #e6e2d3;">
+    <header style="text-align: center; padding: 20px; background-color: #c19c76">
+        <h1 style="color: white; font-family: cursive;">PUP PARADISE</h1>
+        <div style="text-align: right; margin-top: 10px;">
+            <nav>
+                <a href="#about-us" style="margin-right: 20px; color: white; font-family: serif;">About Us</a>
+                <a href="#contact" style="margin-right: 20px; color: white; font-family: serif;">Contact </a>
+            </nav>
+        </div>
+    </header>
+    <section class="pup-paradise-section">
+        <div class="scrolling-text">
+            Welcome to Pup Paradise
+        </div>
+        <a href="#our-products" class="shop-now-btn">Shop Now</a>
+    </section>
+
+    <section id="our-products" style="padding: 20px; text-align: center;">
+        <h2>Our Products</h2>
+        <br><br>
+        <div style="display: flex; justify-content: center; gap: 40px;">
+           
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtTegOjtzd_sD3sdmYwtnX7ApRKBK
+                fMBQ69gF2i2-f3thSvdpdoiqHDHmgcQwT9vdTJ8&usqp=CAU" alt="Food"  class="product-image" height = 170px width=200px>
+                <h2>Food</h2>
+                <p>Maintain your adult dog's optimal health with Adult Canine Care.
+                     <br>This delicious recipe features real beef as the primary ingredient,
+                     <br> delivering lean protein for energy and muscle tone.</p>
+                     <a href="https://www.amazon.com/dog-food/s?k=dog+food" target="_blank" style="color: black; text-decoration: underline;">Learn more</a>
+            </div>
+                    
+            
+            <div>
+                <img src="https://m.media-amazon.com/images/I/91dC4aGb3NL._AC_UF1000,1000_QL80_.jpg" alt="Bed" class="product-image"
+                  height = 170px width=200px >
+                  <h2>Bed</h2>
+                <p>Indulge your furry friend with ultimate comfort!
+                    <br> Our dog bed is designed to provide your
+                     <br> beloved companion with a cozy and supportive sleep space.</p>
+                     <a href="https://www.amazon.com/dog-bed/s?k=dog+bed" target="_blank" style="color: black; text-decoration: underline;">Learn more</a>
+            </div>
+          
+            <div>
+                <img src="https://imgmedia.lbb.in/media/2022/11/63777f8193e4452d0b9afaf9_1668775809144.jpg" 
+                alt="Apparels" class="product-image" height = 170px width=200px >
+                <h2>Apparels</h2>
+                <p>Dress your furry friend in style with our adorable and 
+                    <br> functional dog apparel collection! From cozy sweaters to 
+                    <br> stylish raincoats, we have something to suit every dog's personality and needs.</p>
+                    <a href="https://www.amazon.com/dogs-costumes-clothes-accessories-apparel/b?ie=UTF8&node=2975313011" target="_blank" style="color: black; text-decoration: underline;">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about-us" style="padding: 20px; background-color: #c4b7a6">
+        <h2>About Us</h2>
+        <p><b>Shreyanshi Sharma - RA2211028010090</b><br>We're a team of passionate dog lovers dedicated to providing the best possible products for our furry friends.
+             <br>Our journey began with a shared love for dogs and a desire to create products that not only look great but 
+             <br> also prioritize comfort, safety, and functionality.We believe that every dog deserves to feel happy,healthy,
+             <br> and loved, and we're committed to making that a reality.</p>
+    </section>
+
+    <section id="contact" style="padding: 20px;">
+        <h2>Contact</h2>
+        <p>Phone Number: 0976451235
+            <br>Email: puparadise@gmail.com </p>
+    </section>
+
+    <section id="more products" style="padding: 20px; background-color:#c4b7a6;">
+        <details>
+            <summary><h2>More Products</h2></summary>
+            <p>Body Harness and Leash | Grooming Glove | Ear wipes       
+            <br>Led Dog Collar | Paw Butter | Anti tick powder</p>
+        </details>
+    </section>
+</body>
+</html>
+
+
